@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+        .weather {
+          @apply text-2xl text-center font-poppins capitalize;
+        }
+        .weather-text {
+          @apply font-[600] -mb-[8px];
+        }
+        .neutral {
+          @apply bg-gradient-to-t from-sky-400 to-blue-500;
+        }
+        .sunny {
+          @apply bg-gradient-to-t from-orange-600 to-orange-900;
+        }
+        .cloud {
+          @apply bg-gradient-to-t from-slate-400 to-neutral-200;
+        }
+        .rain {
+          @apply bg-gradient-to-t from-blue-900 to-sky-800;
+        }
+        .haze {
+          @apply bg-gradient-to-t from-slate-100 to-neutral-300;
+        }
+      }

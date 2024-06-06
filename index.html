@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reddit+Mono:wght@200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sofia&display=swap");
+    </style>
+    <link rel="stylesheet" href="output.css">
+  </head>
+  <body
+    class="bg-gradient-to-t isolate relative from-purple-900 to-violet-900 h-screen"
+  >
+    <!-- <div id="decor" class="w-[500px] h-[500px] absolute bg-violet-900 left-0 rounded-full blur-xl "></div> -->
+    <div
+      id="home-page"
+      class="w-screen h-screen backdrop-blur-xl bg-slate-100/20 flex flex-col items-center justify-center gap-2"
+    >
+      <img
+        src="img/weather(1).png"
+        class="anak w-[220px] h-[220px] -mt-8 drop-shadow-[10px_4px_40px_rgba(50,200,90,.8)]"
+        alt=""
+      />
+      <div class="text-center anak">
+        <h1 class="font-poppins font-[700] text-4xl text-indigo-300 capitalize ">
+          Weather app
+        </h1>
+        <p class="capitalize font-poppins font-[600] text-lg -mt-[2px] italic">
+          <span class="text-blue-600 font-[600]">devano</span> yudhistira
+        </p>
+      </div>
+      <button
+        id="started"
+        class="anak font-poppins text-indigo-300 text-2xl bg-gradient-to-r from-violet-600 shadow-xl hover:shadow-2xl hover:shadow-violet-800 shadow-purple-800 to-purple-600 py-2 px-6 rounded-full font-[800] duration-300 hover:-translate-y-2 animate-slideup hover:text-sky-500"
+      >
+        get started
+      </button>
+    </div>
+
+    <main class="w-screen h-screen flex flex-col neutral capitalize hidden">
+      <figure
+        id="error-404"
+        class="hidden flex flex-col items-center justify-center mt-44 self-center justify-self-center text-center"
+      >
+        <img src="img/404-error.png" class="w-[200px] h-[200px]" />
+        <figcaption
+          class="font-[600] text-4xl -mt-[10px] inline-block font-poppins bg-gradient-to-l from-violet-700 to-purple-700 text-transparent bg-clip-text"
+        >
+          we can't find your city
+        </figcaption>
+      </figure>
+
+      
+      <div id="city-detail" class="text-center flex gap-2  hidden self-center items-center justify-center">
+        <button
+        id="close"
+        class="self-center mt-4  rounded-xl"
+      >
+        <i
+          class="fa-solid fa-close capitalize text-red-700 hover:text-red-600 duration-200 text-2xl"
+        ></i>
+      </button>
+        <h1 id="city" class="text-2xl mt-4 font-poppins font-[600]"></h1>
+      </div>
+      <div class="self-center">
+        <form action="" class="mt-2 flex gap-2">
+          <input
+            type="text"
+            autocomplete="off"
+            id="search"
+            class="border-none outline-none focus:outline-2 focus:outline-blue-400 transition-all duration-300 rounded-2xl font-poppins font-[700] w-[280px] px-2 py-[12px] placeholder:text-xl"
+            placeholder="search"
+          />
+          <button
+            type="submit"
+            class="self-center bg-slate-200 px-[10px] py-[9px] rounded-xl"
+          >
+            <i
+              class="hover:text-blue-700 duration-200 fa-solid fa-magnifying-glass text-2xl"
+            ></i>
+          </button>
+        </form>
+      </div>
+
+      <div
+        id="searchtext"
+        class="text-center self-center justify-self-center relative top-[40%]"
+      >
+        <h1
+          id="searchstart"
+          class="text-4xl tracking-wider font-poppins font-[800] bg-gradient-to-l from-blue-700 to-sky-700 text-transparent bg-clip-text"
+        >
+          search your city <i class="fa-solid fa-magnifying-glass"></i>
+        </h1>
+      </div>
+
+      <div id="detail" class="flex flex-col items-center hidden">
+        <figure class="self-center text-center">
+          <img
+            id="weathericon"
+            src="img/weather.png"
+            class="w-[300px] h-[300px]"
+            alt="cloud"
+          />
+          <figcaption
+            id="currweather" class="text-5xl -mt-4 font-[800] text-slate-100"
+          ></figcaption>
+          <p id="temp" class="text-3xl font-[700]"></p>
+        </figure>
+
+        <div class="flex gap-4 mt-8 self-center">
+          <div class="weather">
+            <h3 class="weather-text">
+              humidity <i class="fa-solid fa-water"></i>
+            </h3>
+            <p id="humidity">20%</p>
+          </div>
+          <div class="weather mt-8">
+            <h3 class="weather-text">
+              feels like <i class="fa-solid fa-temperature-half"></i>
+            </h3>
+            <p id="feels">20C</p>
+          </div>
+          <div class="weather">
+            <h3 class="weather-text">
+              wind speed <i class="fa-solid fa-wind"></i>
+            </h3>
+            <p id="wind">20km/h</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/7c8801c017.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
